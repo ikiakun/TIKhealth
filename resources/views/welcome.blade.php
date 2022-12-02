@@ -45,9 +45,9 @@
                                     <div class="card-header">{{ $item->judul }}</div>
                                     
                                     <div class="card-body">
-                                        <img src="{{ asset('storage/'), $item->foto }}" alt="">
+                                        <img src="{{ asset('storage/').$item->foto }}" alt="">
                                         <p>{{ $item->isi }}</p>
-                                        <p>Penulis: {{ $item->user_id->name }}</p>
+                                        <p>Penulis: {{ $item->user->name }}</p>
                                     </div>
                                 @endforeach
                             </div>

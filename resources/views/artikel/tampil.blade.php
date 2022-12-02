@@ -23,7 +23,7 @@
                 <th scope="col">{{ $loop->iteration }}</th>
                 <td>{{ $item->judul }}</td>
                 <td>
-                    <img src="{{ asset('storage/', $item->foto) }}">    
+                    <img src="{{ asset('storage/'.$item->foto) }}" height="50px" >    
                 </td>
                 <td>{{ $item->isi }}</td>
                 <td>{{ $item->updated_at }}</td>

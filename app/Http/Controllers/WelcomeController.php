@@ -10,7 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-class ArtikelController extends Controller
+class WelcomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,7 +20,9 @@ class ArtikelController extends Controller
     public function index()
     {
         $data = Artikel::all();
-        return view('artikel.tampil', compact('data'));
+        $data2 = Kategori::all();
+        $data3 = User::all();
+        return view('welcome', compact('data', 'data2', 'data3'));
     }
 
     /**
